@@ -1,0 +1,25 @@
+<!-- <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{value.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Discription</h6>
+      <p class="card-text">{{value.discription}}</p>
+      <h6 class="card-subtitle mb-2 text-muted">LastModified</h6>
+      <p class="card-text">{{value.timeStamp}}</p>
+      <a routerLink="/edit/{{value.timeStamp}}" class="card-link">Edit</a>
+      <a (click)="onDelete(value.timeStamp)" class="card-link">Delete</a>
+    </div>
+  </div> -->
+<div class="row">
+  <div class="card text-white bg-dark mb-3 margine-left" style="width: 18rem;" *ngFor="let todoItem of todoList;let indexOfelaement=index">
+    <div class="card-body">
+      <h5 class="card-title">Title :</h5>
+      <h6 class="card-subtitle mb-2 ">{{todoItem.title}}</h6>
+      <h5 class="card-title">Discription :</h5>
+      <h6 class="card-subtitle mb-2 ">{{todoItem.discription}}</h6>
+      <h5 class="card-title">UpdatedOn</h5>
+      <h6 class="card-subtitle mb-2 ">{{todoItem.timeStamp | date:'medium'}}</h6>
+      <a routerLink="/edit/{{indexOfelaement}}" class="card-link">Edit</a>
+      <a (click)="onDelete(indexOfelaement)" class="card-link">Delete</a>
+    </div>
+  </div>
+  </div>
