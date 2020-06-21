@@ -10,5 +10,12 @@
       <a routerLink="/edit/{{indexOfelaement}}" class="card-link">Edit</a>
       <a (click)="onDelete(indexOfelaement)" class="card-link">Delete</a>
     </div>
+    <div class="card-footer" *ngIf=todoItem.isCompleted>
+      Completed
+    </div>
+    <div class="card-footer" *ngIf=!todoItem.isCompleted>
+      Not Completed
+    </div>
+    
   </div>
   </div>

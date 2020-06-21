@@ -4,6 +4,9 @@
     <p> <input class="textBox" [(ngModel)]="title" type="text"></p>
     <h6 class="card-title">Description :</h6>
     <p> <input class="textBox" [(ngModel)]="description" type="text"></p>
-    <a (click)="addToList()" class="btn btn-primary center">Save</a>
+    <span>Mark as Complete
+    <input type="checkbox" [(ngModel)]="isCompleted" style="float: left; width: 30px;height: 40px;">
+  </span>
+  <a (click)="addToList()" class="btn btn-primary">Save</a>
   </div>
 </div>
