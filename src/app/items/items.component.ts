@@ -19,10 +19,6 @@ export class ItemsComponent implements OnInit {
   ngOnInit(): void {
     this.todoList = this.todoService.todoArray;
   }
-
-  // onEdit(timeStamp:Date) {
-  //   this.router.navigate(['/edit',timeStamp]);
-  // }
   
   onDelete(index:any) {
     this.todoService.deleteFromList(index);

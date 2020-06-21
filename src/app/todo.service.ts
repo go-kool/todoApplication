@@ -14,15 +14,6 @@ export class TodoService {
     this.todoArray.push(new Item(title,discription))
   }
 
-  // deleteFromList(timeStamp:any)
-  // {
-  //   for (let index = 0; index < this.todoArray.length; index++) {
-  //     if(this.todoArray[index].timeStamp===timeStamp){
-  //       this.todoArray.splice(index,1);
-  //     }
-  //   }
-  // }
-
   deleteFromList(index:any)
   {
       this.todoArray.splice(index,1);
